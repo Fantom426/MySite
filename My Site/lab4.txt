@@ -1,0 +1,67 @@
+Часть I. Протокол HTTP
+1.
+GET /suggest-ff.cgi?part=%D1%81%D0%B0%D0%B9%D1%82 HTTP/1.1
+Host: suggest.yandex.net
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+2.
+HTTP/1.0 200 OK
+Date: Thu, 16 Mar 2017 07:07:31 GMT
+Cache-Control: private, max-age=60
+Content-Disposition: attachment; filename="f.txt"
+Content-Type: application/json; charset=UTF-8
+Status: 200 Ok
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Content-Length: 510
+X-Cache: MISS from class.mmcs.sfedu.ru
+X-Cache-Lookup: MISS from class.mmcs.sfedu.ru:3128
+Via: 1.0 class.mmcs.sfedu.ru (squid/3.1.19)
+Connection: keep-alive
+
+3.
+GET
+Имя CGI-программы - suggest-ff.cgi
+Передаваемый параметр - part
+Значение параметра - %D1%81%D0%B0%D0%B9%D1%82
+
+4.
+POST /citizens/val_login HTTP/1.1
+Host: novochgrad.ru
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Referer: http://novochgrad.ru/citizens/login.html
+Content-Length: 61
+Cookie: PHPSESSID=bkd7e7i2jsopl4nbb7rk41t843; _ym_uid=14896480913593857; _ym_isad=2
+Connection: keep-alive
+
+email=Vadik426_426%40mail.ru&password=qwertyuio&captcha_code=
+
+
+POST /handler/news HTTP/1.1
+Host: grade.sfedu.ru
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:43.0) Gecko/20100101 Firefox/43.0
+Accept: */*
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+X-Requested-With: XMLHttpRequest
+Referer: http://grade.sfedu.ru/
+Cookie: _ym_uid=1488285531532502293; _ym_isad=2; session_name=f2boe3r1tg7vffeulkak0bmhg4
+Connection: keep-alive
+Content-Length: 0
+
+5.
+Cookie: _ym_uid=1488285531532502293; _ym_isad=2; session_name=f2boe3r1tg7vffeulkak0bmhg4
+Срок действия cookie истекает Пн. 18 февр. 2019 15:38:51
+
+6.Cookie: _ym_uid=1488285531532502293; MoodleSession=8fkte8ejbl687kea8i6n8obku1; _ym_isad=2
+Домен: .sfedu.ru
+Срок действия cookie истекает Пн. 18 февр. 2019 15:38:51
